@@ -1,0 +1,44 @@
+body {
+    font-family: Georgia, serif;
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+    letter-spacing: 3px;
+
+}
+
+.title p {
+    color: #0047BA;
+    letter-spacing: 3px;
+}
+
+.title {
+    border-bottom: 1px solid #ccc;
+}
+
+.main-content {
+    text-align: left;
+    padding-top: 40px;
+    line-height: 1.8;
+}
+
+.main-content li {
+    margin-bottom: 15px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.image-container {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
