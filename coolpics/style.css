@@ -24,7 +24,13 @@ nav h1 {
 }
 
 nav ul {
-    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 9px 0;
 }
 
 nav a {
@@ -54,6 +60,38 @@ img {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
+dialog {
+    border: none;
+    padding: 0;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: hidden;
+    outline: none;
+}
+
+/* width 40 height 67*/
+dialog img {
+    width: 90vw;
+    height: 50vh;
+    object-fit: cover;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    display: block;
+}
+
+dialog::backdrop {
+    background-color:  rgba(0, 0, 0, 0.7);
+}
+
+.close-viewer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    border: none;
+
+}
 .gallery {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -63,7 +101,10 @@ img {
     justify-content: center;
     width: fit-content;
 }
-                        
+
+.hide {
+    display: none;
+}
      
 
 
@@ -78,6 +119,16 @@ footer {
 @media screen and (min-width: 550px) {
     .gallery {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    dialog img {
+    width: 70vw;
+    height: 67vh;
+    object-fit: cover;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    display: block;
     }
     
 }
@@ -108,6 +159,15 @@ footer {
     margin: 0 auto;
     justify-content: center;
     width: fit-content;
+    }
+    dialog img {
+    width: 40vw;
+    height: 67vh;
+    object-fit: cover;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    display: block;
     }
 }
 
