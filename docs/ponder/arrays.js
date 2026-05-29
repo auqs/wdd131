@@ -39,7 +39,7 @@ function convert(grade) {
             break;
         case 'B':
             points = 3;
-            break;
+            break;                                                  
         case 'C':
             points = 2;
             break;
