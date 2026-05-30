@@ -18,8 +18,7 @@ header {
     text-align: center;
     padding: 20px 16px 8px;
     border-bottom: 2px solid orange;
-
-    
+    font-family: serif, Arial, sans-serif;
 }
 
 header h1 {
@@ -74,12 +73,14 @@ main {
     text-align: right;
     font-weight: bold;
     padding-right: 16px;
+    font-style: italic;
 }
 
 .review-title {
     grid-area: title;
     color: #c0392b;
     font-size: 1.2rem;
+    font-family: serif, Arial, sans-serif;
 
 }
 
