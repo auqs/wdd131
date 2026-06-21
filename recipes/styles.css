@@ -1,6 +1,3 @@
-/* ============================
-   Variables & Reset
-   ============================ */
 :root {
     --color-cream: #FBF3E7;
     --color-terracotta: #C76B3F;
@@ -36,11 +33,6 @@ img {
     left: -9999px;
 }
 
-/* ============================
-   MOBILE FIRST (base styles)
-   ============================ */
-
-/* --- Header: logo + title, search --- */
 .site-header {
     display: flex;
     flex-direction: column;
@@ -172,11 +164,11 @@ main {
 
 .recipe-description {
     color: var(--color-dark-brown);
-    /* Hidden on mobile - only the image, tag, title, and rating show */
+    
     display: none;
 }
 
-/* --- Footer --- */
+
 .site-footer {
     display: flex;
     flex-direction: column;
@@ -223,9 +215,6 @@ main {
     text-align: center;
 }
 
-/* ============================
-   TABLET / DESKTOP (min-width overrides)
-   ============================ */
 @media (min-width: 600px) {
     .recipe-description {
         display: block;
