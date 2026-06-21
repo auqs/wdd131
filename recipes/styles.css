@@ -1,0 +1,277 @@
+/* ============================
+   Variables & Reset
+   ============================ */
+:root {
+    --color-cream: #FBF3E7;
+    --color-terracotta: #C76B3F;
+    --color-teal: #2F6F6E;
+    --color-dark-brown: #3E2C23;
+    --color-olive: #7A8450;
+    --color-white: #FFFFFF;
+
+    --font-headline: 'Amatic SC', sans-serif;
+    --font-body: 'Nunito Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-cream);
+    color: var(--color-dark-brown);
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+/* ============================
+   MOBILE FIRST (base styles)
+   ============================ */
+
+/* --- Header: logo + title, search --- */
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--color-white);
+    padding: 1.5rem 1rem;
+    border-bottom: 3px solid var(--color-terracotta);
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.site-title {
+    font-family: var(--font-headline);
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--color-dark-brown);
+    line-height: 1;
+}
+
+.search-area {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.search-area input[type="search"] {
+    flex: 1;
+    font-family: var(--font-body);
+    padding: 0.6rem 0.85rem;
+    border: 2px solid #ddd;
+    border-radius: 999px;
+    font-size: 1rem;
+}
+
+.search-area button {
+    background-color: var(--color-white);
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.search-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* --- Recipe Card --- */
+main {
+    padding: 1.5rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.recipe {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.recipe-image-wrap {
+    position: relative;
+}
+
+.recipe-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.recipe-tag {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    background-color: var(--color-white);
+    color: var(--color-dark-brown);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    padding: 0.3rem 0.75rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-content {
+    padding: 1rem 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.4rem;
+}
+
+.recipe-title {
+    font-family: var(--font-headline);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-teal);
+    line-height: 1;
+}
+
+.rating {
+    font-size: 1.1rem;
+}
+
+.icon-star-empty {
+    opacity: 0.4;
+}
+
+.recipe-description {
+    color: var(--color-dark-brown);
+    /* Hidden on mobile - only the image, tag, title, and rating show */
+    display: none;
+}
+
+/* --- Footer --- */
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--color-white);
+    color: var(--color-dark-brown);
+    padding: 1.5rem 1rem;
+    margin-top: 1.5rem;
+}
+
+.site-footer a {
+    color: var(--color-teal);
+}
+
+.social {
+    display: flex;
+    gap: 1rem;
+    order: -1;
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.social img {
+    width: 16px;
+    height: 16px;
+}
+
+.attribution {
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+/* ============================
+   TABLET / DESKTOP (min-width overrides)
+   ============================ */
+@media (min-width: 600px) {
+    .recipe-description {
+        display: block;
+    }
+
+    .recipe {
+        flex-direction: row;
+    }
+
+    .recipe-image-wrap {
+        flex: 1 1 320px;
+    }
+
+    .recipe-image {
+        height: 100%;
+        aspect-ratio: auto;
+    }
+
+    .recipe-content {
+        flex: 1 1 320px;
+        align-items: flex-start;
+        text-align: left;
+        padding: 1.5rem;
+    }
+
+    .recipe-title {
+        font-size: 2.75rem;
+    }
+}
+
+@media (min-width: 700px) {
+    .site-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .search-area {
+        width: auto;
+    }
+
+    .site-footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .social {
+        order: 0;
+    }
+}
