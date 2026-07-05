@@ -3,96 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RecipeBook</title>
-    <meta name="description" content="Recipebook that display on the screen">
     <meta name="author" content="Austyn Quispe">
- 
-    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Your Title">
-    <meta property="og:description" content="Your Description">
-    <meta property="og:url" content="Your URL">
-    <meta property="og:image" content="social-preview-image.png">
- 
-    <!-- X Card -->
-    <meta name="twitter:card" content="Social Preview Image">
-    <meta name="twitter:title" content="Your Title">
-    <meta name="twitter:description" content="Your Description">
-    <meta name="twitter:image" content="social-preview-image.png">
- 
-    <!-- One favicon (ICO works everywhere) -->
-    <link rel="icon" href="/favicon.ico">
- 
-    <!-- One Apple Touch Icon (iOS home screen) -->
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
- 
-    <!-- Google Font: Amatic SC for headlines -->
+    <meta name="description" content="A page where you can find a recipe.">
+    <title>RecipeBook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
- 
-    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-    <header class="site-header">
-        <div class="branding">
-            <img src="image1.png" alt="Recipe book logo" class="logo">
-            <h1 class="site-title">RecipeBook</h1>
-        </div>
- 
-        <form class="search-area" role="search">
-            <label for="search" class="visually-hidden">Find a recipe</label>
-            <input type="search" id="search" name="search" placeholder="Search recipes">
-            <button type="submit" aria-label="Search">
-                <img src="image3.svg" alt="" class="search-icon">
-            </button>
-        </form>
+    <header>
+        <img src="image1.png" alt="Recipebook Header.">
+        <span class="Recipebook-title">RecipeBook</span>
     </header>
- 
     <main>
-        <article class="recipe">
-            <div class="recipe-image-wrap">
-                <img src="image2.jpg" alt="A baking dish of a nice platter of warm apple crisp topped with golden oats" class="recipe-image">
-                <span class="recipe-tag">dessert</span>
+        <div class="searchrecipe">
+            <input type="text" id="recipe-search" placeholder="Find a recipe">
+            <div class="magni-container">
+                <img src="image3.svg" alt="A magnifying glass next to the recipe search">
             </div>
- 
-            <div class="recipe-content">
-                <h2 class="recipe-title">Apple Crisp</h2>
- 
+        </div>
+        <hr class="divider">
+        <div class="recipebox">
+            <div class="imagebox">
+                <img src="image2.jpg" alt="A delicious picture of an apple crisp">
+            </div>
+            <div class="content">
+                <button class="tag-btn">dessert</button>
+                <h2>Apple Crisp</h2>
+                <!-- Code from https://wddbyui.github.io/wdd131/prove/prove_wk9.html -->
                 <span
-                    class="rating"
-                    role="img"
-                    aria-label="Rating: 4 out of 5 stars"
+                class="rating"
+                role="img"
+                aria-label="Rating: 4 out of 5 stars"
                 >
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star-empty">☆</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star-empty">☆</span>
                 </span>
- 
-                <p class="recipe-description">
-                    A warm, comforting dessert made with tender baked apples and a buttery oat
-                    and brown sugar crumble. Serve it fresh out of the oven with a scoop of
-                    vanilla ice cream for the perfect fall treat.
-                </p>
+                <p>
+                    This apple crisp recipe is a simple 
+                    yet delicious fall dessert that's great 
+                    served warm with vanilla ice cream.
+                </p> 
             </div>
-        </article>
-    </main>
- 
-    <footer class="site-footer">
-        <p class="attribution">
-            <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
-        </p>
- 
-        <div class="social">
+        </div>
+        <div class="creditsnsocialcontainer">
+            <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>                   
+            <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
             <a href="#"><img src="image5.svg" alt="instagram icon"></a>
             <a href="#"><img src="image4.svg" alt="youtube icon"></a>
             <a href="#"><img src="image6.svg" alt="pinterest icon"></a>
+            </div>                       
         </div>
- 
-        <p class="copyright">&copy; 2026 Home Cookbook. All rights reserved.</p>
-    </footer>
+    </main>
 </body>
 </html>
- 
