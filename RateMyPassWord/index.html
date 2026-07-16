@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Austyn Quispe" />
+    <meta
+      name="description"
+      content="A website that rates the users password"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/1.1.0/zxcvbn.js"></script>
+    <script src="rmpw.js" defer></script>
+    <!-- Citation: Claude.com-->
+    <title>RateMyPassWord</title>
+  </head>
+  <body>
+    <header>
+      <img src="images/image111.png" alt="Logo for RateMyPassword site." />
+      <nav>
+        <a href="#about" class="nav-about">About</a>
+        <a href="#privacy" class="nav-privacy">Privacy</a>
+        <a href="#credits" class="nav-credits">Credits</a>
+      </nav>
+    </header>
+    <main>
+      <section class="main-section">
+        <h1>Rate My Password</h1>
+        <div class="input-outer">
+          <div class="input">
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="password-input"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="off"
+              />
+              <button
+                type="button"
+                id="toggle-visibility"
+                aria-label="Show password"
+              >
+                <img
+                  src="images/transparent-eyeball.png"
+                  alt="An eye icon that will show your password"
+                  width="20"
+                  height="20"
+                />
+              </button>
+            </div>
+            <div id="meter-wrapper">
+              <div id="strength-meter"></div>
+            </div>
+          </div>
+        </div>
+
+        <ul id="feedback-list"></ul>
+      </section>
+      <div class="content-block">
+        <section id="about">
+          <h2>About</h2>
+          <p>
+            The purpose of this website is to provide a rating on your password.
+            The website will use a meter of strength to see whether your
+            password is strong or not. There are about 5 levels. Strong, Good,
+            Developing, Okay, Bad. These categories will dictate whether the
+            password has sufficent characters, unique symbols, uppercase and
+            lowercase letters, including numbers.
+          </p>
+          <p>
+            Our goal of this website is not to only rate how strong or weak your
+            password is. We also want to educate you what makes a very strong
+            password. We want you to make better choices when creating a
+            password. A password is an important part of our lives, this is how
+            we can stay secure from threat actors that attempt to login into
+            your account.
+          </p>
+        </section>
+        <section id="privacy">
+          <h3>Privacy</h3>
+          <p>
+            We would like to mention that anything inputed are transmitted
+            locally in your browser. Your passwords are never stored, logged,
+            nor transmitted whatsoever!! You can test your password's strength
+            with the utmost assurance that you're protected.
+          </p>
+        </section>
+      </div>
+      <div class="content-block">
+        <section id="credits">
+          <h4>Credits</h4>
+          <p>
+            This website was made with love, care, and distrust of weak not so
+            good passwords.
+          </p>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
