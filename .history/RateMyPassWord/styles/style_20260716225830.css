@@ -425,7 +425,7 @@ header img {
 
 @keyframes colorCycle {
   0% {
-    color: pink;
+    color: palevioletred;
   }
   25% {
     color: var(--secondary-color);
