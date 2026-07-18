@@ -412,6 +412,8 @@ header img {
   }
 }
 
+/* With the help of Claude */
+
 @keyframes fadeInTip {
   0% {
     opacity: 0;
